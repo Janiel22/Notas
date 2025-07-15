@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cadastro - Portal Escolar</title>
+        <link real="stylesheet" href="/css/j.css">
+    </head>
+    <body>
+        <div class="login-container">
+            <h2>Criar Conta</h2>
+            <form action="/register" method="POST">
+                <label for="username"></label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Senha:</label>
+                <select name="tipo" id="tipo" required>
+                    <option value="aluno">Aluno</option>
+                    <option value="professor">Professor</option>
+                </select>
+                <button type="submit">Cadastrar</button>
+            </form>
+            <p class="mensagem-erro"><%= mensaguemErro %></p>
+        </div>
+    </body>
+</html>
